@@ -1,7 +1,11 @@
-const GREETING = 'Bienvenue sur ma première application conteneur !';
+const GREETING = [
+    "Bievenue sur mon premier site ! ",
+    "Podcast.mbdiixcreations.com",
+    "Welcome everyone !",
+];
 
 module.exports = async (req, res) => {
     res.send({
-        greeting: GREETING,
+        greeting: GREETING[ Math.floor(Math.random() * GREETING.length)],
     });
 };
